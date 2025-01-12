@@ -1,0 +1,30 @@
+.question {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+label {
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.answer {
+    font-size: x-large;
+    border-radius: 0.2em;
+    padding: 0.1em;
+    text-align: center;
+    padding: 0.5em;
+    color: green;
+}
+.issuebox {
+    margin-left: 5px;
+}
+.questionask {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}

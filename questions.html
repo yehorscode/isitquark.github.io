@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsItQuark?</title>
+    <link rel="stylesheet" href="./questions.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <label>
+        What is your issue?
+        <input type="text" name="What" id="issue-input" class="issuebox">
+    </label>
+    <div class="main-div" id="main-div" style="display: none;">
+        <div id="question" class="question">
+            <div id="questionbox-1" class="questionask">
+                <h1>1. Do you have quark installed?</h1>
+                <label>
+                    <input type="radio" name="option" value="value1" id="yes-quark">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" name="option" value="value1" id="no-quark">
+                    No
+                </label>
+                <div id="answer-1">
+                    <span id="no-quark-msg" class="answer" style="display: none;" class="answer">the issue is not
+                        quark</span>
+                </div>
+            </div>
+            <div id="questionbox-2" class="questionask">
+                <h1>2. Are your blocks weird?</h1>
+                <label>
+                    <input type="radio" name="option" value="value1" id="blocksweird-1">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" name="option" value="value1" id="blocksweird-2">
+                    No
+                </label>
+                <div id="answer-2">
+                    <span id="blocks-msg" style="display: none;" class="answer">the issue is quark</span>
+                </div>
+            </div>
+            <div id="questionbox-3" class="questionask">
+                <h1>3. Are the blocks you mine not showing in JEI?</h1>
+                <label>
+                    <input type="radio" name="option" value="value1" id="jei-1">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" name="option" value="value1" id="jei-2">
+                    No
+                </label>
+                <div id="answer-2">
+                    <span id="jei-msg" style="display: none;" class="answer">the issue is quark</span>
+                </div>
+            </div>
+            <div id="questionbox-3" class="questionask">
+                <h1>4. Are you getting weird items and you don't know how to use them?</h1>
+                <label>
+                    <input type="radio" name="option" value="value1" id="weird-1">
+                    Yes
+                </label>
+                <label>
+                    <input type="radio" name="option" value="value1" id="weird-2">
+                    No
+                </label>
+                <div id="answer-2">
+                    <span id="weird-msg" style="display: none;" class="answer">the issue is quark</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    document.getElementById("issue-input").addEventListener("input", function () {
+        if (this.value !== "") {
+            document.getElementById("main-div").style.display = "block";
+        } else {
+            document.getElementById("main-div").style.display = "none";
+        }
+    })
+    document.querySelectorAll("#question input[type='radio']").forEach(function (radio) {
+        radio.addEventListener("click", function () {
+            if (this.id === "blocksweird-1") {
+                document.getElementById("blocks-msg").style.display = "block";
+            } else {
+                document.getElementById("blocks-msg").style.display = "none";
+            }
+        })
+        radio.addEventListener("click", function () {
+            if (this.id === "no-quark") {
+                document.getElementById("no-quark-msg").style.display = "block";
+            } else {
+                document.getElementById("no-quark-msg").style.display = "none";
+            }
+
+        })
+        radio.addEventListener("click", function () {
+            if (this.id === "jei-1") {
+                document.getElementById("jei-msg").style.display = "block";
+            } else {
+                document.getElementById("jei-msg").style.display = "none";
+            }
+
+        })
+        radio.addEventListener("click", function () {
+            if (this.id === "weird-1") {
+                document.getElementById("weird-msg").style.display = "block";
+            } else {
+                document.getElementById("weird-msg").style.display = "none";
+            }
+        })
+    })
+</script>
+
+</html>
